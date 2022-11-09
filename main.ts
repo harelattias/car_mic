@@ -1,5 +1,6 @@
-let moveMotorZIP: Kitronik_Move_Motor.MoveMotorZIP = null
-input.onSound(DetectedSound.Loud, function () {
+let moveMotorZIP : Kitronik_Move_Motor.MoveMotorZIP = null
+input.onSound(DetectedSound.Loud, function on_sound_loud() {
+    
     Kitronik_Move_Motor.soundSiren(Kitronik_Move_Motor.OnOffSelection.On)
     moveMotorZIP = Kitronik_Move_Motor.createMoveMotorZIPLED(4)
     moveMotorZIP.setZipLedColor(0, Kitronik_Move_Motor.colors(Kitronik_Move_Motor.ZipLedColors.Red))
@@ -19,6 +20,6 @@ input.onSound(DetectedSound.Loud, function () {
         basic.pause(100)
     }
 })
-basic.forever(function () {
-	
+basic.forever(function on_forever() {
+    
 })
